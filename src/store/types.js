@@ -1,0 +1,8 @@
+const ACTIONS = {
+    SET_MINUTE: 'SET_MINUTE',
+    START_DRAW_TIMER: 'START_DRAW_TIMER',
+    COUNT_DOWN: 'COUNT_DOWN',
+    DRAW: 'DRAW'
+}
+
+export default ACTIONS;

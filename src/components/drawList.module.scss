@@ -1,0 +1,26 @@
+.drawList {
+  text-align: center;
+  .drawList__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .drawList__box {
+    border: gray 1px solid;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+  }
+  .drawList__participant {
+    display: flex;
+    height: 50px;
+    margin: 5px;
+    .participant__avatar {
+      background: yellow;
+      width: 50px;
+    }
+    .participant__name {
+      background: #eeeeee;
+      width: calc(100% - 50px);
+    }
+  }
+}
