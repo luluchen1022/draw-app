@@ -6,6 +6,7 @@ const intialState =
   drawList,
   drawResult: {},
   minute: 0,
+  showResult: false,
 }
 
 
@@ -34,7 +35,13 @@ function draw(state = intialState, action) {
       const drawResult = drawList[Math.floor(Math.random() * drawList.length)]
       return {
         ...state,
-        drawResult
+        drawResult,
+        showResult: true
+      }
+    case ACTIONS.IS_SHOW_RESULT:
+      return {
+        ...state,
+        showResult: false
       }
     default:
       return state

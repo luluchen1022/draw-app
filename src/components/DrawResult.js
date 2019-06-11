@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import styles from './DrawResult.module.scss'
+import { isShowResult } from "../store/actions"
 
-function DrawResult({ drawResult }) {
+function DrawResult({ drawResult, closeResult, showResult }) {
   return (
-    <div className={styles.drawResult}>
+    <div className={`${styles.drawResult} ${showResult ? "" : styles.none}`} onClick={closeResult}>
       <div>
         <p className={styles.drawResult_title}>抽獎結果</p>
         <div className={styles.drawResult__participant}>
@@ -20,5 +21,7 @@ function DrawResult({ drawResult }) {
   )
 }
 
-const mapStateToProps = ({ drawResult }) => ({ drawResult })
-export default connect(mapStateToProps)(DrawResult);
+const mapStateToProps = ({ drawResult, showResult }) => ({ drawResult, showResult })
+const mapDispatchToProps = { closeResult: isShowResult }
+
+export default connect(mapStateToProps, mapDispatchToProps)(DrawResult);
