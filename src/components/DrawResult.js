@@ -9,7 +9,7 @@ function DrawResult({ drawResult }) {
         <p className={styles.drawResult_title}>抽獎結果</p>
         <div className={styles.drawResult__participant}>
           <div className={styles.participant__avator}>
-            <img src={drawResult.avatar} />
+            <img src={drawResult.avatar} alt="" />
           </div>
           <div className={styles.participant__name}>
             <p>{drawResult.name}</p>

@@ -12,7 +12,7 @@ function DrawList({ drawList }) {
         {drawList.map((participant, index) =>
           <div key={index} className={styles.drawList__participant}>
             <div className={styles.participant__avatar}>
-              <img src={participant.avatar} />
+              <img src={participant.avatar} alt="" />
             </div>
             <div className={styles.participant__name}>
               {participant.name}
