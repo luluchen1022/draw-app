@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './drawList.module.scss'
+import styles from './DrawList.module.scss'
 import { connect } from 'react-redux'
 
 function DrawList({ drawList }) {
@@ -12,7 +12,7 @@ function DrawList({ drawList }) {
         {drawList.map((participant, index) =>
           <div key={index} className={styles.drawList__participant}>
             <div className={styles.participant__avatar}>
-              {participant.avatar}
+              <img src={participant.avatar} />
             </div>
             <div className={styles.participant__name}>
               {participant.name}

@@ -12,8 +12,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-  onSettingClick: startDrawTimer,
   onMinuteChange: e => setMinute(e.target.value),
+  onSettingClick: startDrawTimer,
   countDown,
   draw
 }

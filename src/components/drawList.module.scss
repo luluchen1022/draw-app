@@ -8,19 +8,40 @@
     border: gray 1px solid;
     padding: 10px;
     height: 300px;
+    width: 300px;
     overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 15px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #dddddd;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   }
   .drawList__participant {
     display: flex;
     height: 50px;
     margin: 5px;
     .participant__avatar {
-      background: yellow;
+      background: pink;
       width: 50px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
     }
     .participant__name {
-      background: #eeeeee;
       width: calc(100% - 50px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #dddddd;
+      font-size: 1.2rem;
     }
   }
 }
